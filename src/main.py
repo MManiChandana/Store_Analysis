@@ -1,9 +1,9 @@
-from preprocessing import load_and_prepare_data
+from preprocessing import load_and_prepare_data_with_eda
 from similarity import calculate_similarity
 from visualization import plot_trial_vs_control
 
 # Step 1: Load data
-monthly_data = load_and_prepare_data()
+monthly_data = load_and_prepare_data_with_eda()
 print("Total Stores:", monthly_data['STORE_NBR'].nunique())
 # Step 2: Find control stores
 control_77 = calculate_similarity(monthly_data, 77)
